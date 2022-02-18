@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Teste</title>
+</head>
+<body>
+    <h1 id="tuto" class="text-center">h1</h1>
+    <h2 class="text-end tuto">h2</h2>
+    <h3 class="margin-100 text-center">h3</h3>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente numquam nulla commodi velit, possimus non eius, temporibus laboriosam incidunt magni, quo neque quisquam porro inventore obcaecati quas eum alias maiores!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci corrupti tempora ipsum doloribus maiores, quae quasi perferendis natus quibusdam eius nulla! Magnam nihil provident ipsam. Vero expedita neque quos eius?</p>
+
+    <div class="display-flex flex-direction-row align-items-center justify-content-center flex-wrap">
+        <ul class="ul1 line-height-50 p-50">
+            <h3>title</h3>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+        </ul>
+
+        <ul class="ul2 line-height-150 p-50">
+            <h3>title 2</h3>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+        </ul>
+
+        <ul class="ul3 line-height-100 p-50">
+            <h3>title 3</h3>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+        </ul>
+
+        <ol class="ol1">
+            <h3>title 4</h3>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+        </ol>
+    </div>
+
+    <div class="display-flex flex-direction-column align-items-center" style="padding-top: 50px;">
+        <label for="input-1">label teste</label>
+
+        <div class="display-flex flex-direction-row align-items-center justify-content-center flex-wrap">
+            <input id="testetxt" name="input-1" type="text">
+            <input name="input-1" type="button" value="botao" onclick="buttonOnClick(inputTesteTxt)">
+        </div>
+
+    </div>
+
+    <script>
+        var inputTesteTxt = document.querySelector("#testetxt");
+        
+        function buttonOnClick(campo) {
+            var texto = campo.value;
+            alert("Texto no input: " + texto);
+            campo.value = "dinossauro";
+            campo.style = "padding-top: 500000px;";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+body {
+    background-color:rgb(30, 25, 25);
+    color: white;
+}
+
+#tuto {
+    color: green;
+}
+
+.ul1 {
+    list-style-type: none;
+}
+
+.ul2 {
+    list-style-type: circle;
+}
+
+.ul3 {
+    list-style-type: disc;
+}
+
+.ol1 {
+    list-style-type: upper-latin;
+}
+
+.line-height-50 {
+    line-height: 50%;
+}
+
+.line-height-100 {
+    line-height: 100%;
+}
+
+.line-height-150 {
+    line-height: 150%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-end {
+    text-align: end;
+}
+
+.margin-100 {
+    margin: 100px;
+}
+
+.margin-100:hover {
+    transition: 1s;
+    font-size: 200%;
+    color: red;
+}
+
+.margin-100:not(:hover) {
+    transition: 1s;
+    font-size: 100%;
+}
+
+.p-50 {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/*******************   FLEXBOX   *******************/
+
+.display-flex {
+    display: flex;
+}
+
+.flex-direction-row {
+    flex-direction: row;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
