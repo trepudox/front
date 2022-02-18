@@ -63,17 +63,58 @@ body {
     padding-right: 50px;
 }
 
-/*******************   FLEXBOX   *******************/
-
-.display-flex {
-    display: flex;
+.m-1 {
+    margin: 1.25%;
 }
 
-.flex-direction-row {
+.botao {
+    background-color: blueviolet;
+    border-color: chartreuse;
+    border-radius: 10%;
+    color: red;
+}
+
+.labeltxt {
+    cursor: pointer;
+}
+
+/*******************    SCROLL    *******************/
+
+/* width */
+::-webkit-scrollbar {
+    width: 8.5px;
+    height: 8.5px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 3px grey;
+    border-radius: 0px;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(170, 14, 14);
+    border-radius: 4px;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(124, 11, 11);
+}  
+
+/*******************   FLEXBOX   *******************/
+
+.dflex {
+    display: flex;
+    margin: 5px;
+}
+
+.flex-row {
     flex-direction: row;
 }
 
-.flex-direction-column {
+.flex-column {
     flex-direction: column;
 }
 
@@ -81,8 +122,16 @@ body {
     align-items: center;
 }
 
+.align-items-start {
+    align-items: flex-start;
+}
+
 .justify-content-center {
     justify-content: center;
+}
+
+.justify-content-start {
+    justify-content: start;
 }
 
 .flex-wrap {

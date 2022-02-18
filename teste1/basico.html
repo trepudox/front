@@ -11,10 +11,15 @@
     <h2 class="text-end tuto">h2</h2>
     <h3 class="margin-100 text-center">h3</h3>
 
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente numquam nulla commodi velit, possimus non eius, temporibus laboriosam incidunt magni, quo neque quisquam porro inventore obcaecati quas eum alias maiores!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci corrupti tempora ipsum doloribus maiores, quae quasi perferendis natus quibusdam eius nulla! Magnam nihil provident ipsam. Vero expedita neque quos eius?</p>
+    <div class="dflex flex-column align-items-start justify-content-center">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente numquam nulla commodi velit, possimus non eius, temporibus laboriosam incidunt magni, quo neque quisquam porro inventore obcaecati quas eum alias maiores!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci corrupti tempora ipsum doloribus maiores, quae quasi perferendis natus quibusdam eius nulla! Magnam nihil provident ipsam. Vero expedita neque quos eius?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum obcaecati placeat eaque dolorum odio aspernatur natus, tenetur labore voluptate at ut recusandae repellat fugiat! Saepe, assumenda! Molestiae quam animi tenetur?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora molestiae doloremque dolores molestias quaerat nostrum voluptatibus nisi placeat cupiditate animi quasi ex soluta repellat corrupti ut laborum, autem assumenda iste?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, officiis? Ex tenetur esse, nisi fuga magni ipsam dignissimos reprehenderit, ab numquam vero sint accusamus dolorem harum. Voluptates vitae unde dolores!</p>
+    </div>
 
-    <div class="display-flex flex-direction-row align-items-center justify-content-center flex-wrap">
+    <div class="dflex flex-row align-items-center justify-content-center flex-wrap">
         <ul class="ul1 line-height-50 p-50">
             <h3>title</h3>
             <li>item 1</li>
@@ -44,24 +49,39 @@
         </ol>
     </div>
 
-    <div class="display-flex flex-direction-column align-items-center" style="padding-top: 50px;">
-        <label for="input-1">label teste</label>
+    <div class="dflex flex-column align-items-center" style="padding-top: 50px;">
+        <label id="labeltxt" class="labeltxt" for="testetxt" onmouseover="mouseOverLabel(labelTesteTxt)" onmouseleave="mouseForaLabel(labelTesteTxt)" onclick="onClickLabel(labelTesteTxt)">label teste</label>
 
-        <div class="display-flex flex-direction-row align-items-center justify-content-center flex-wrap">
-            <input id="testetxt" name="input-1" type="text">
-            <input name="input-1" type="button" value="botao" onclick="buttonOnClick(inputTesteTxt)">
+        <div class="dflex flex-row align-items-center justify-content-center">
+            <input id="testetxt" class="m-1" type="text">
+            <input class="botao m-1" type="button" value="botao" onclick="buttonOnClick(inputTesteTxt)">
         </div>
 
     </div>
 
     <script>
+        var labelTesteTxt = document.querySelector("#labeltxt");
         var inputTesteTxt = document.querySelector("#testetxt");
         
+        var texto = labelTesteTxt.innerHTML;
+        
+        function mouseOverLabel(campo) {
+            campo.innerHTML = "CLICA".toUpperCase();
+        }
+
+        function mouseForaLabel(campo) {
+            campo.innerHTML = texto.toLowerCase();
+        }
+
+        function onClickLabel(campo) {
+            campo.innerHTML = "zoera";
+        }
+
         function buttonOnClick(campo) {
             var texto = campo.value;
             alert("Texto no input: " + texto);
             campo.value = "dinossauro";
-            campo.style = "padding-top: 500000px;";
+            campo.class = "";
         }
     </script>
 </body>
