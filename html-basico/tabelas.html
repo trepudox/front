@@ -3,6 +3,20 @@
 <head>
     <meta charset="utf-8">
     <title>Tabelas</title>
+
+<style>
+
+table, tr, th, td {
+    border: 1px groove black;
+    padding: 1.5px;
+}
+
+.cupom {
+    text-align: center;
+}
+
+</style>
+
 </head>
 
 <body>
@@ -31,6 +45,43 @@
             <td>Marco Queiroz</td>
             <td>19</td>
         </tr>
+    </table>
+
+    <br><hr><br>
+
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th>Preço</th>
+        </tr>
+
+        <tr>
+            <td>001</td>
+            <td colspan="3">Marco</td>
+        </tr>
+
+        <tr>
+            <td>002</td>
+            <td>orange cat</td>
+            <td>999</td>
+            <td>18.888</td>
+        </tr>
+
+        <tr>
+            <td rowspan="2">Desconto</td>
+            <td colspan="3" class="cupom">
+                <a href="imagens.html">Cupom 1 - R$ 10 OFF</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="3" class="cupom">
+                <a href="imagens.html">Cupom 2 - Frete Grátis</a>
+            </td>
+        </tr>
+
     </table>
 
 </body>
