@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Inputs</title>
+    
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        #eye {
+            user-select: none; 
+            -webkit-user-select: none;
+            -webkit-touch-callout : none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            cursor: pointer;
+        }
+
+        #button {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Login</h1>
+    <hr>
+
+    <form>
+        <label for="username">Username:</label><br>
+        <input type="text" id="username">
+        
+        <br><br>
+        
+        <label for="password">Password:&nbsp;</label><br>
+        <input type="password" id="password" >
+        <em id="eye" onclick="showPassword()">👀</em>
+
+        <br>
+
+        <input id="button" type="button" value="Log in" onclick="login()">
+    </form>
+
+    <script>
+        var password = document.querySelector("#password");
+        var username = document.querySelector("#username")
+        var eye = document.querySelector("#eye");
+
+        function showPassword() {
+            if(password.type === "password") {
+                password.type = "text";
+            } else {
+                password.type = "password";
+            }
+        }
+
+        function login() {
+            if(username.value == "" || password.value == "") {
+                alert("You must enter a valid username and a valid password");
+            } else {
+                alert("Logged in!");
+                username.value = "";
+                password.value = "";
+            }
+        }
+    </script>
+
+</body>
+</html>
