@@ -1,0 +1,50 @@
+#titulo {
+    font-size: 25pt;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 800;
+}
+
+#link {
+    font-size: 15pt;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    margin-left: 30px;
+}
+
+#conteudo {
+    margin-top: 15px;
+    padding: 10px;
+    border: 7.5px outset green;
+}
+
+#conteudo2 {
+    margin-top: 25px;
+    padding: 10px;
+    border: 7.5px groove blue;
+}
+
+#conteudo3 {
+    margin-top: 25px;
+    padding: 10px;
+    border: 7.5px solid blue;
+    border-radius: 10px;
+}
+
+#conteudo4 {
+    margin-top: 25px;
+    padding: 10px;
+    border: 10px ridge rebeccapurple;
+    border-radius: 50%;
+}
+
+#conteudo5 {
+    margin-top: 25px;
+    padding: 10px;
+    border-width: 10px 8px 5px 100px;
+    border-style: dashed outset dotted none;
+    border-color: red blue;
+}
+
+.span-text {
+    margin: 30px;
+}
