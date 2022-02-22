@@ -1,0 +1,8 @@
+table, tr, th, td {
+    border: 1px groove black;
+    padding: 1.5px;
+}
+
+.cupom {
+    text-align: center;
+}
