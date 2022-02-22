@@ -19,7 +19,7 @@
             cursor: pointer;
         }
 
-        #button {
+        #buttonLogin, #buttonCadastro {
             margin-top: 15px;
         }
     </style>
@@ -31,41 +31,196 @@
     <hr>
 
     <form>
-        <label for="username">Username:</label><br>
-        <input type="text" id="username">
+        <label for="usernameLogin">Username:</label><br>
+        <input id="usernameLogin" type="text">
         
         <br><br>
         
-        <label for="password">Password:&nbsp;</label><br>
-        <input type="password" id="password" >
-        <em id="eye" onclick="showPassword()">👀</em>
+        <label for="passwordLogin">Password:</label><br>
+        <input id="passwordLogin" type="password">
+        <em id="eye" onclick="showPassword(passwordLogin)">👀</em>
 
         <br>
 
-        <input id="button" type="button" value="Log in" onclick="login()">
+        <input id="buttonLogin" type="button" value="Log in" onclick="login()">
     </form>
 
-    <script>
-        var password = document.querySelector("#password");
-        var username = document.querySelector("#username")
-        var eye = document.querySelector("#eye");
+    <br><br>
 
-        function showPassword() {
-            if(password.type === "password") {
-                password.type = "text";
+    <h1>Cadastro</h1>
+    <hr>
+
+    <form>
+        <label for="usernameCadastro">Username:</label> <br>
+        <input id="usernameCadastro" type="text" name="usernameCadastro"> <br><br>
+
+        <label for="passwordCadastro1">Password:</label> <br>
+        <input id="passwordCadastro1" type="password" name="passwordCadastro1">
+        <em id="eye" onclick="showPassword(passwordCadastro1)">👀</em> <br><br>
+
+        <label for="passwordCadastro2">Repeat your password:</label><br>
+        <input id="passwordCadastro2" type="password" name="passwordCadastro2">
+        <em id="eye" onclick="showPassword(passwordCadastro2)">👀</em>
+
+        <br><br>
+
+        Sexo:<br>
+        <input id="sexo1" type="radio" name="sexo" value="M">
+        <label for="sexo1">Masculino</label>
+        
+        <input id="sexo2" type="radio" name="sexo" value="F">
+        <label for="sexo2">Feminino</label>
+        
+        <input id="sexo3" type="radio" name="sexo" value="N">
+        <label for="sexo3">Prefiro não responder</label>
+
+        <br><br>
+
+        Interesses:<br>
+        <input id="esportesCheckbox" type="checkbox" name="interesses" value="Esportes">
+        <label for="esportesCheckbox">Esportes</label>
+
+        <input id="gamesCheckbox" type="checkbox" name="interesses" value="Games">
+        <label for="gamesCheckbox">Games</label>
+
+        <input id="filmesCheckbox" type="checkbox" name="interesses" value="Filmes">
+        <label for="filmesCheckbox">Filmes</label>
+
+        <input id="livrosCheckbox" type="checkbox" name="interesses" value="Livros">
+        <label for="livrosCheckbox">Livros</label>
+
+        <br><br>
+
+        Estado:<br>
+        <select id="estadoSelect" name="estado">
+            <option value="SP">São Paulo</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="ES">Espírito Santo</option>
+        </select>
+        
+        <br>
+
+        <input id="buttonCadastro" type="button" value="Cadastrar" onclick="cadastrar()">
+    </form>
+
+
+
+    <script>
+        // Login fields
+        var passwordLogin = document.querySelector("#passwordLogin");
+        var usernameLogin = document.querySelector("#usernameLogin");
+
+
+        // Sign up fields
+        var usernameCadastro = document.querySelector("#usernameCadastro");
+        var passwordCadastro1 = document.querySelector("#passwordCadastro1");
+        var passwordCadastro2 = document.querySelector("#passwordCadastro2");
+
+        function login() {
+            if(usernameLogin.value == "" || passwordLogin.value == "") {
+                alert("You must enter a valid username and a valid password to log in");
             } else {
-                password.type = "password";
+                alert("Logged in!");
+                usernameLogin.value = "";
+                passwordLogin.value = "";
             }
         }
 
-        function login() {
-            if(username.value == "" || password.value == "") {
-                alert("You must enter a valid username and a valid password");
-            } else {
-                alert("Logged in!");
-                username.value = "";
-                password.value = "";
+        function cadastrar() {
+            var usernamePssd = usernameCadastro.value;
+            if(usernamePssd === "") {
+                alert("O campo 'username' é obrigatório");
+                return;
             }
+
+            var passwordPssd1 = passwordCadastro1.value;
+            var passwordPssd2 = passwordCadastro2.value;
+            if(passwordPssd1 === "" || passwordPssd2 === "") {
+                alert("As senhas precisam estar preenchidas");
+                return;
+            } else if (passwordPssd1 != passwordPssd2) {
+                alert("As senhas precisam ser idênticas");
+                return;
+            }
+
+            var sexoPssd = returnSexoValue();
+            if(sexoPssd === "N/A") {
+                alert("O campo 'sexo' é obrigatório");
+                return;
+            }
+            
+            var interessesPssd = returnInteressesValue();
+            var estadoPssd = document.querySelector("#estadoSelect").value;
+
+            var account = new Account(usernamePssd, passwordPssd1, sexoPssd, interessesPssd, estadoPssd);
+
+            console.log(account);
+            limpaCamposCadastro();
+            alert("Usuário cadastrado com sucesso");
+        }
+
+        function returnInteressesValue() {
+            var interessesFields = document.getElementsByName("interesses");
+            var interessesReturn = [];
+
+            for(var i = 0; i < interessesFields.length; i++) {
+                if(interessesFields[i].checked) {
+                    interessesReturn.push(interessesFields[i].value);
+                }
+            }
+
+            return interessesReturn;
+        }
+
+        function returnSexoValue() {
+            var sexoFields = document.getElementsByName("sexo");
+            
+            for(var i = 0; i < sexoFields.length; i++) {
+                if(sexoFields[i].checked) {
+                    return sexoFields[i].value;
+                }
+            }
+
+
+            return "N/A"
+        }
+
+        function limpaCamposCadastro() {
+            usernameCadastro.value = "";
+            passwordCadastro1.value = "";
+            passwordCadastro2.value = "";
+
+            var sexoFields = document.getElementsByName("sexo");
+            for(var i = 0; i < sexoFields.length; i++) {
+                if(sexoFields[i].checked) {
+                    sexoFields[i].checked = false;
+                }
+            }
+
+            var interessesFields = document.getElementsByName("interesses");
+            for(var i = 0; i < interessesFields.length; i++) {
+                if(interessesFields[i].checked) {
+                    interessesFields[i].checked = false;
+                }
+            }
+
+        }
+
+        function showPassword(passwordField) {
+            if(passwordField.type === "password") {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "password";
+            }
+        }
+
+        function Account(username, password, sexo, interesses, estado) {
+            this.username = username;
+            this.password = password;
+            this.sexo = sexo;
+            this.interesses = interesses;
+            this.estado = estado;
         }
     </script>
 
