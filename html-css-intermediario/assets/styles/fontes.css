@@ -1,0 +1,43 @@
+html {
+    font-size: 16px;
+}
+
+div {
+    font-size: 10px
+}
+
+#texto1 {
+    font-size: 20px;
+}
+
+#texto2 {
+    font-size: 1.5rem;
+    /* está puxando a font-size da tag html */
+}
+
+#texto3 {
+    font-size: 1.5em;
+    /* está puxando a font-size da div */
+}
+
+/*
+px - tamanho fixo em pixels
+em - tamanho relativo ao elemento pai
+rem - tamanho relativo ao elemento raiz (tag html)
+*/
+
+
+
+/* Fontes customizadas */
+
+h1 {
+    text-align: center;
+    font-family: Aclonica, Verdana, Tahoma, sans-serif;
+    font-weight: 900;
+    font-size: 3.5rem;
+}
+
+p {
+    text-align: start;
+    font-family: 'Open Sans', Verdana, Tahoma, sans-serif;
+}
