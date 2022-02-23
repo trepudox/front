@@ -1,0 +1,93 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url("../images/fundo.png");
+    font-family: "Open Sans", Verdana, Tahoma, sans-serif;
+    margin: 0px;
+}
+
+header {
+    width: 900px;
+}
+
+nav {
+    background-color: rgb(128, 112, 112);
+    padding: 20px 0px;
+    margin-top: -4.7px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 900px;
+    padding: 25px 0px;
+    background-color: rgb(128, 112, 112);
+}
+
+#nav-ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0px;
+    padding: 0px 15px;
+}
+
+#nav-ul li {
+    list-style-type: none;
+    display: inline;
+}
+
+#content {
+    width: 900px;
+    background-color: rgb(195, 195, 180);
+}
+
+#content h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+#content h2 {
+    font-size: 1.5rem;
+    margin: 20px 10px;
+}
+
+#content p {
+    font-size: 1.05rem;
+    margin: 15px 10px;
+}
+
+#footer-text {
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+}
+
+.nav-item {
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+
+.nav-item:hover:not(.selected-nav-item) {
+    transition: .15s;
+    text-shadow: 1.75px 1.75px 1.75px rgba(0, 0, 0, .33);
+}
+
+.nav-item:not(:hover) {
+    transition: .15s;
+    text-shadow: 1.75px 1.75px 1.75px rgba(0, 0, 0, 0);
+}
+
+.selected-nav-item {
+    font-weight: 800;
+    cursor: default;
+}
+
+.sep {
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+}
+
