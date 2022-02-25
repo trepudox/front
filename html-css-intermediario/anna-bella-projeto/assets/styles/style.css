@@ -99,3 +99,19 @@ footer {
     margin: 10px 0px;
     border: 2px solid rgb(128, 112, 112);
 }
+
+.bold {
+    font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.contact-label {
+    font-weight: bold;
+}
+
+.contact-text {
+    text-align: center;
+}
