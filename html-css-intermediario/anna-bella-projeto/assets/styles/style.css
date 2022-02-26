@@ -108,10 +108,31 @@ footer {
     text-align: center;
 }
 
+.contact {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 5px 0px 15px 0px;
+}
+
 .contact-label {
     font-weight: bold;
 }
 
-.contact-text {
-    text-align: center;
+/* scroll */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: rgb(195, 195, 180);
+}
+  
+::-webkit-scrollbar-thumb {
+    background: rgb(128, 112, 112);
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(110, 95, 95);
 }
