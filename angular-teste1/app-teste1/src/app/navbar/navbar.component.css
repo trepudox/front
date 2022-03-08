@@ -1,36 +1,40 @@
-a {
-    text-decoration: none;
+ul {
+    margin: 0px;
+    margin-left: auto;
+    margin-right: 10%;
+    padding: 0px;
+    font-family: 'Encode Sans Expanded';
+    font-weight: bold;
+    font-size: 1rem;
 }
 
 li {
     display: inline;
-    padding-right: 5%;
-    padding-left: 5%;
+    margin: 0px 4%;
+    /* abaixo de 500px fazer menu */
 }
 
-.container {
-	width: 90%;
-	margin: 0 auto;
-    background: chartreuse;
+#pesquisa {
+    margin: 0px 3%;
 }
 
-.top-container {
-	background-color: chartreuse; 
-    border-color: black; 
-    border: 0px;
-    border-bottom: 1px;
-    border-style: dotted;
+#input-pesquisa {
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 7.5px;
+}
+
+#icon-pesquisa {
+    position: relative;
+}
+
+.navbar {
+    margin: 0px;
+    border: 1px solid red;
 }
 
 .logo {
-    float: left;
-    min-height: 64px;
-    min-width: 64px;
-    height: 5%;
-    width: 5%;
-}
-
-.list {
-    padding: 0;
-    padding-right: 5%;
+    margin-left: 5%;
+    width: 64px;
+    height: 64px;
 }
