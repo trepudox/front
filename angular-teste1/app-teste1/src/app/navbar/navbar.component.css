@@ -1,26 +1,30 @@
 ul {
-    margin: 0px;
-    margin-left: auto;
-    margin-right: 10%;
+    margin: 0px auto 0px 2%;
+    margin-left: 2%;
+    margin-right: auto;
     padding: 0px;
     font-family: 'Encode Sans Expanded';
     font-weight: bold;
-    font-size: 1rem;
+    font-size: .95rem;
 }
 
 li {
     display: inline;
-    margin: 0px 4%;
-    /* abaixo de 500px fazer menu */
+    margin: 0px 5%;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
 }
 
 #pesquisa {
-    margin: 0px 3%;
+    margin: 0px 2%;
 }
 
 #input-pesquisa {
     height: 20px;
-    border: 1px solid black;
+    border: 1px solid;
     border-radius: 7.5px;
 }
 
@@ -28,13 +32,32 @@ li {
     position: relative;
 }
 
+#auth {
+    font-family: 'Encode Sans Expanded';
+    font-weight: bold;
+    font-size: .95rem;
+    width: 150px;
+    margin-right: 100px;
+}
+
 .navbar {
     margin: 0px;
-    border: 1px solid red;
+    border-bottom: 1px solid;
+    background-color: #0E0D13;
 }
 
 .logo {
-    margin-left: 5%;
-    width: 64px;
+    width: 128px;
     height: 64px;
+}
+
+.login {
+    display: inline;
+    background-color: white;
+    border-radius: 15px;
+
+}
+
+.text-auth {
+    white-space: nowrap;
 }

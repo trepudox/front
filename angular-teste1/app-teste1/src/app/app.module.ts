@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SomaComponent } from './soma/soma.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AlbumsComponent } from './albums/albums.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SomaComponent,
-    NavbarComponent
+    NavbarComponent,
+    AlbumsComponent
   ],
   imports: [
     BrowserModule,

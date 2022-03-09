@@ -1,0 +1,28 @@
+.album-card {
+    border: 2px solid;
+    width: 27rem;
+    height: 9rem;
+    border-radius: 3px;
+    margin: 10px;
+    background-color: #0E0D13;
+}
+
+.album-image {
+    border-radius: 1.5px;
+    margin-left: -2px;
+}
+
+.text-content {
+    max-width: 21rem;
+    max-height: 9rem;
+    margin-bottom: auto;
+}
+
+.content-header {
+    margin: 15px 12.5px 30px 12.5px;
+    word-wrap: break-word;
+}
+
+.content-text {
+    margin: 15px 12.5px;
+}
