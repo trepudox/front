@@ -1,27 +1,70 @@
-<div class="dflex flex-column align-items-center">
-    <h1>All Albums</h1>
-    
-    <div class="dflex flex-row">
-        <div class="album-card dflex flex-row align-items-center justify-content-start">
-            <img src="../../assets/img/Capa_Homework.jpg" alt="Capa Album" height="103%" class="album-image">
-            <div class="text-content">
-                <h2 class="content-header">Homework</h2>
-                <div class="content-text">genero</div>
-                <span class="content-text">Daft Punk, 1997</span>
+<div class="row content dflex justify-content-between">
+    <div class="col-1"></div>
+
+    <div class="col-2">
+        <div class="dflex flex-column">
+            <h1>Filter</h1>
+            
+            <h3>Genre</h3>
+            <div class="filter-topic">
+                <div class="dflex align-items-center">
+                    <input type="radio" name="Genre" id="Classic">
+                    <label for="Classic">Classic</label>
+                </div>
             </div>
-        </div>
+            
+            <div class="filter-topic">
+                <div class="dflex align-items-center">
+                    <input type="radio" name="Genre" id="MPB">
+                    <label for="MPB">MPB</label>
+                </div>
+            </div>
     
-        <div class="album-card dflex flex-row align-items-center justify-content-start">
-            <img src="../../assets/img/Plastic Beach.jpg" alt="Capa Album" height="103%" class="album-image">
-            <div class="text-content">
-                <h2 class="content-header">Plastic Beach</h2>
-                <div class="content-text">genero</div>
-                <span class="content-text">Gorillaz, 2010</span>
+            <h3>Artist</h3>
+            <div class="filter-topic">
+                <div class="dflex align-items-center">
+                    <input type="radio" name="Artist" id="Daft Punk">
+                    <label for="Daft Punk">Daft Punk</label>
+                </div>
+            </div>
+            
+            <div class="filter-topic">
+                <div class="dflex align-items-center">
+                    <input type="radio" name="Artist" id="Gorillaz">
+                    <label for="Gorillaz">Gorillaz</label>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    
+    <div class="col-8">
+        <div class="dflex flex-column">
+            <h1 style="text-align: center;">20 albums found</h1>
+    
+            <div class="dflex flex-row justify-content-around">
+                <div class="album-card dflex flex-row align-items-center justify-content-start">
+                    <img src="../../assets/img/Capa_Homework.jpg" alt="Capa Album" height="103%" class="album-image">
+                    <div class="text-content">
+                        <h2 class="content-header">Homework</h2>
+                        <div class="content-text">genero</div>
+                        <span class="content-text">Daft Punk, 1997</span>
+                    </div>
+                </div>
+            
+                <div class="album-card dflex flex-row align-items-center justify-content-start">
+                    <img src="../../assets/img/Plastic Beach.jpg" alt="Capa Album" height="103%" class="album-image">
+                    <div class="text-content">
+                        <h2 class="content-header">Plastic Beach</h2>
+                        <div class="content-text">genero</div>
+                        <span class="content-text">Gorillaz, 2010</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-    <br><br>
-
+    
+    <div class="col-1"></div>
+    
 </div>
 

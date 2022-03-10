@@ -1,3 +1,23 @@
+.content {
+    overflow: hidden;
+}
+
+input {
+    margin: 0px 5px 0px 0px;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin: 20px 0px 10px 10px;
+}
+
+.filter-topic {
+    margin-left: 10px;
+}
+
 .album-card {
     border: 2px solid;
     width: 27rem;
