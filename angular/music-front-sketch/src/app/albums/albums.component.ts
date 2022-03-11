@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlbumsComponent implements OnInit {
 
+  public num: number = 10;
+
   constructor() { }
 
   ngOnInit(): void {

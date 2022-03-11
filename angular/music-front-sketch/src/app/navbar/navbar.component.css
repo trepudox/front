@@ -1,13 +1,14 @@
 ul {
-    margin: 0px auto 0px 2%;
+    margin: 0px auto 0px 1%;
     padding: 0px;
     font-family: 'Encode Sans Expanded';
     font-weight: bold;
     font-size: .95rem;
+    white-space: nowrap;
 }
 
 li {
-    display: inline;
+    display: inline-block;
     margin: 0px 2.5%;
 }
 

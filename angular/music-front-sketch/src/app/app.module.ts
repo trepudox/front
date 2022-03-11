@@ -8,13 +8,21 @@ import { AppComponent } from './app.component';
 import { SomaComponent } from './soma/soma.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AlbumsComponent } from './albums/albums.component';
+import { HomeComponent } from './home/home.component';
+import { ArtistsComponent } from './artists/artists.component';
+import { MusicsComponent } from './musics/musics.component';
+import { GenresComponent } from './genres/genres.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SomaComponent,
     NavbarComponent,
-    AlbumsComponent
+    AlbumsComponent,
+    HomeComponent,
+    ArtistsComponent,
+    MusicsComponent,
+    GenresComponent
   ],
   imports: [
     BrowserModule,
