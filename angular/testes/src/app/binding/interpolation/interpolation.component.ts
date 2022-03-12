@@ -12,4 +12,11 @@ export class InterpolationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public saudacao: string = "oie";
+  public mensagem: string = "interpolation works!";
+
+  public nome: string = "Marco";
+  public idade: number = 19;
+  public idadeComp: number = 15;
+
 }
