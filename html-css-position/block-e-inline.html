@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Block e Inline</title>
+    <style>
+        @import url(assets/styles/fonts-config.css);
+
+        * {
+            font: bold 1rem Rubik, sans-serif
+        }
+
+        span {
+            font-size: 150%;
+        }
+
+        .borda1 {
+            border: 1px solid red;
+        }
+
+        .borda2 {
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+    
+    block
+    <span class="borda1" style="display: block;">Bloco 1</span>
+    <span class="borda2" style="display: block;">Bloco 2</span>
+
+    <br><br>
+
+    inline <br>
+    <span class="borda1">Inline 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores unde ipsa minima minus quam laboriosam explicabo quisquam!</span>
+    <span class="borda2">Inline 2</span>
+
+    <br><br>
+
+    inline-block <br>
+    <span class="borda1" style="display: inline-block;">Inline-Block 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores unde ipsa minima minus quam laboriosam explicabo quisquam! </span>
+    <span class="borda2" style="display: inline-block;">Inline-Block 2</span>
+
+</body>
+</html>

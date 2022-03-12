@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Posicionamentos</title>
+
+    <style>
+        html {
+            background-color: grey;
+        }
+
+        #container {
+            width: 900px;
+            margin: 100px auto;
+            padding: 10px;
+            background: #F3F3F3;
+        }
+
+        #container2 {
+            margin: 100px 100px;
+            padding: 10px;
+            background: chartreuse;
+            position: sticky;
+        }
+
+        p {
+            width: 400px;
+        }
+
+        .relative {
+            border: 1px solid red;
+            position: relative;
+            left: 50%;
+            bottom: 100px;
+        }
+
+        .absolute1 {
+            border: 1px solid blue;
+            position: absolute;
+            top: 0;
+        }
+
+        .absolute2 {
+            border: 1px solid green;
+            position: absolute;
+            left: 50%;
+        }
+
+        .fixed {
+            position: fixed;
+            border: 1px solid brown;
+            margin: 0px;
+            top: 0px;
+            right: 0px;
+        }
+
+        .sticky {
+            position: sticky;
+            position: -webkit-sticky;
+            border: 1px solid hotpink;
+            background: hotpink;
+            top: 0px;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Posicionamento padrão: static -->
+<div id="container2">
+
+    <div id="container">
+        <h1>Posicionamentos</h1>
+
+        <p class="sticky">P1 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi adipisci quaerat ea perspiciatis iusto velit itaque architecto doloremque, non iste dolores vel nesciunt harum maxime, totam optio fuga rerum quam?</p>
+        
+        <!-- Posicionamento relativo: o elemento tem uma posição relativa à posição que seria estática, ou seja, que estaria no fluxo padrão do documento (que é o fluxo estático) -->
+        <p class="relative">P2 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus molestiae voluptas placeat, vel hic optio voluptate saepe assumenda reprehenderit praesentium dolor, ut ducimus officiis adipisci repellat? Quos atque molestias deleniti!</p>
+
+        <p>P3 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui exercitationem id blanditiis nemo. Dolorum magnam labore tempora architecto ratione ipsa eum quis assumenda odio omnis quibusdam, maiores repellendus facere provident?</p>
+
+        <!-- Posicionamento absoluto: o elemento com esse posicionamento sai do fluxo padrão do documento e sobrepõe os outros elementos do container pai, diferentemente do relative, o absolute faz com que outros elementos sigam o fluxo corretamente -->
+        <!-- Outro ponto importante é que o absolute tem como referência de posicionamento o container pai mais próximo com position diferente de static -->
+        <p class="absolute1">P4 - Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, aspernatur odit ullam soluta molestias dolore beatae praesentium corporis quod inventore error sunt iste voluptatum. Tempore accusantium enim veniam aut officiis.</p>
+
+        <p>P5 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe natus animi soluta nam nihil cumque temporibus autem, nesciunt amet dolores aperiam odio sit tempora ab incidunt magnam voluptatem beatae perspiciatis.</p>
+
+        <p class="absolute2">P6 - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit illum, eius quaerat neque pariatur sunt? Nemo modi voluptas fugit. Sequi doloremque itaque eum officia ea vitae? Rem veniam dolore libero.</p>
+
+        <p>P7 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, quam consectetur! Tempora explicabo officia deserunt, repellendus corrupti ducimus veritatis? Nostrum assumenda corporis aspernatur blanditiis unde commodi placeat non aperiam laboriosam.</p>
+
+        <!-- Posicionamento fixo: o elemento fica fixo na tela -->
+        <p class="fixed">P8 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quia, molestiae vitae quasi corporis, amet impedit omnis iure, sit laudantium doloremque! Enim minus aliquid molestiae dolore, adipisci tenetur doloremque quaerat!</p>
+
+        <p>P9 - Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate asperiores aspernatur laborum! Et illum nobis veritatis eligendi eaque totam sunt rem laudantium at saepe. Placeat sunt culpa facere tempora sit?</p>
+
+        <p>P10 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima a voluptatum, ipsa id omnis nesciunt? Dolorum nam vel quos quaerat sapiente ullam, voluptatibus, obcaecati, culpa sequi temporibus tenetur asperiores officiis.</p>
+
+        <p>P11 - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis ut, placeat cumque quae quidem tempore provident necessitatibus reprehenderit repellendus perspiciatis porro, accusamus maxime adipisci sunt! Debitis dolor exercitationem omnis tenetur?</p>
+
+        <p>P12 - Lorem ipsum dolor, sit amet consectetur adipisicing elit. At quaerat alias rerum harum incidunt minima, eos quidem, porro in facilis dolorem est, repellendus cum laborum! Vel ratione ea optio consequatur.</p>
+    </div>
+</div>
+</body>
+</html>
