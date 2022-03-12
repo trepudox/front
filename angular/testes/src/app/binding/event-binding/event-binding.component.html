@@ -1,1 +1,14 @@
-<p>event-binding works!</p>
+<h1>Event Binding</h1>
+
+<button (click)="alerta('boa!', $event)">Click event!!!</button>
+
+<br>
+
+<div style="display: flex; flex-direction: column; align-items: center; width: 410px;">
+    <div (mousemove)="displayPosition($event)" style="border: 1px solid red; width: 400px; height: 400px;"></div>
+    <span>X: {{ position.x }} | Y: {{ position.y }}</span>
+</div>
+
+
+
+<hr>
