@@ -12,4 +12,6 @@ export class TwoWayBindingComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public nome: string = "";
+
 }
