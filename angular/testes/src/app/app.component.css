@@ -1,0 +1,7 @@
+#home-button {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    color: #14121a;
+}
