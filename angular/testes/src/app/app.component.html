@@ -1,2 +1,5 @@
-<div id="home-button">aaa</div>
+<div id="home-button" *ngIf="notHomePath" routerLink="/home">
+    <span class="material-icons" id="icon-home">home</span>
+</div>
+
 <router-outlet></router-outlet>

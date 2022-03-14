@@ -1,7 +1,33 @@
 #home-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     position: fixed;
     bottom: 0;
     right: 0;
+
+    cursor: pointer;
     background-color: white;
     color: #14121a;
+    border-radius: 50%;
+    margin: 20px;
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .33);
+}
+
+#home-button:hover {
+    transition: .33s;
+    background-color: rgb(235, 235, 235);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+}
+
+#home-button:not(:hover) {
+    transition: .33;
+    background-color: white;
+}
+
+#icon-home {
+    padding: 10px;
+    font-size: 2rem;
 }

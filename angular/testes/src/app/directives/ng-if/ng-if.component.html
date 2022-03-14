@@ -1,0 +1,17 @@
+<h1>NgIf</h1>
+
+<span *ngIf="timeCondition; else falseBlock">True</span>
+
+<ng-template #falseBlock>
+    <span>False</span>
+</ng-template>
+
+<br><br>
+
+<button (click)="changeButtonCondition()">Trocar buttonCondition</button>
+<span *ngIf="buttonCondition">True</span>
+<span *ngIf="!buttonCondition">False</span>
+
+
+
+<hr>

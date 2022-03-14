@@ -11,10 +11,11 @@ import { EventBindingComponent } from './bindings/event-binding/event-binding.co
 import { TwoWayBindingComponent } from './bindings/two-way-binding/two-way-binding.component';
 
 import { DirectivesComponent } from './directives/directives.component';
-import { ForComponent } from './directives/for/for.component';
-import { IfComponent } from './directives/if/if.component';
 
 import { HomeComponent } from './home/home.component';
+import { NgIfComponent } from './directives/ng-if/ng-if.component';
+import { NgForComponent } from './directives/ng-for/ng-for.component';
+import { NgSwitchComponent } from './directives/ng-switch/ng-switch.component';
 
 @NgModule({
   declarations: [
@@ -24,10 +25,11 @@ import { HomeComponent } from './home/home.component';
     PropertyBindingComponent,
     EventBindingComponent,
     TwoWayBindingComponent,
-    ForComponent,
-    IfComponent,
     HomeComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    NgIfComponent,
+    NgForComponent,
+    NgSwitchComponent
   ],
   imports: [
     BrowserModule,
