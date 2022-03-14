@@ -5,18 +5,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SomaComponent } from './soma/soma.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { AlbumsComponent } from './albums/albums.component';
-import { HomeComponent } from './home/home.component';
-import { ArtistsComponent } from './artists/artists.component';
-import { MusicsComponent } from './musics/musics.component';
-import { GenresComponent } from './genres/genres.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { AlbumsComponent } from './components/albums/albums.component';
+import { HomeComponent } from './components/home/home.component';
+import { ArtistsComponent } from './components/artists/artists.component';
+import { MusicsComponent } from './components/musics/musics.component';
+import { GenresComponent } from './components/genres/genres.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SomaComponent,
     NavbarComponent,
     AlbumsComponent,
     HomeComponent,

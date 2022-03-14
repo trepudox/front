@@ -10,9 +10,6 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   constructor() { }
 
   ngAfterViewInit(): void {
-    console.log("Carregou")
-
-    setTimeout(()=> { console.clear() }, 5000);
   }
   
   ngOnInit(): void {

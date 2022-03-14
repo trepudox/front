@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AlbumsComponent } from './albums/albums.component';
-import { ArtistsComponent } from './artists/artists.component';
-import { GenresComponent } from './genres/genres.component';
-import { HomeComponent } from './home/home.component';
-import { MusicsComponent } from './musics/musics.component';
+import { AlbumsComponent } from './components/albums/albums.component';
+import { ArtistsComponent } from './components/artists/artists.component';
+import { GenresComponent } from './components/genres/genres.component';
+import { HomeComponent } from './components/home/home.component';
+import { MusicsComponent } from './components/musics/musics.component';
 
 const routes: Routes = [
 
