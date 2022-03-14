@@ -9,11 +9,9 @@ import { filter } from 'rxjs';
 })
 export class AppComponent implements AfterViewInit {
 
-  private router: Router;
   public notHomePath: boolean;
 
-  constructor(private rtr: Router) {
-    this.router = rtr;
+  constructor(private router: Router) {
   }
 
   ngAfterViewInit(): void {
