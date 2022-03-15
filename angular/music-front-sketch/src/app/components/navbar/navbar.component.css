@@ -13,8 +13,8 @@ li {
 }
 
 li a:not(:hover) {
-    text-decoration: none;
     transition: .2s;
+    text-decoration: none;
     color: #EBEBEB;
     text-shadow: 0px 0px 10px rgba(255, 255 , 255, 0);
 }
@@ -38,6 +38,7 @@ li a:hover {
 }
 
 #pesquisa:focus-within #icon-pesquisa, #pesquisa:focus-within #input-pesquisa {
+    transition: .2s;
     box-shadow: 0px 0px 10px rgba(255, 255 , 255, 0.3);
 }
 
@@ -54,12 +55,12 @@ li a:hover {
 }
 
 #icon-pesquisa:not(:hover) {
+    transition: .2s;
     position: relative;
     color: #0E0D13;
+    font-size: 2rem;
     border-radius: 0px 7.5px 7.5px 0px;
     right: 0%;
-    font-size: 2rem;
-    transition: .2s;
     background-color: #EBEBEB;
 }
 
@@ -107,8 +108,8 @@ li a:hover {
 }
 
 #login-bt:hover {
-    transform: scale(1.05);
     transition: .2s;
+    transform: scale(1.05);
     background-color: #FFFFFF;
     border-radius: 15px;
     cursor: pointer;
