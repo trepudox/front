@@ -14,9 +14,9 @@
       <li><a routerLink="/genres">Genres</a></li>
     </ul>
 
-    <div id="pesquisa" class="dflex align-items-center">
-      <input type="text" name="input-pesquisa" id="input-pesquisa" size="35">
-      <span class="material-icons" id="icon-pesquisa">search</span>
+    <div id="pesquisa" class="dflex align-items-center justify-content-center">
+      <input type="text" name="input-pesquisa" id="input-pesquisa" [(ngModel)]="inputText" (keydown)="pesquisar(inputText, $event)">
+      <span class="material-icons" id="icon-pesquisa" (click)="pesquisar(inputText, $event)">search</span>
     </div>
   
     <div id="auth" class="dflex flex-row align-items-center justify-content-between">

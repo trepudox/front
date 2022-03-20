@@ -11,6 +11,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ArtistsComponent } from './components/artists/artists.component';
 import { MusicsComponent } from './components/musics/musics.component';
 import { GenresComponent } from './components/genres/genres.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { GenresComponent } from './components/genres/genres.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
