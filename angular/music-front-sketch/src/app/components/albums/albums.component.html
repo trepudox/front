@@ -1,70 +1,77 @@
 <div class="row content dflex justify-content-between">
-    <div class="col-1"></div>
+  <div class="col-1"></div>
 
-    <div class="col-2">
-        <div class="dflex flex-column">
-            <h1>Filter</h1>
-            <hr style="width: 50%; align-self: start;">
-            <h3>Genre</h3>
-            <div class="filter-topic">
-                <div class="dflex align-items-center">
-                    <input type="radio" name="Genre" id="Classic">
-                    <label for="Classic">Classic</label>
-                </div>
-            </div>
-            
-            <div class="filter-topic">
-                <div class="dflex align-items-center">
-                    <input type="radio" name="Genre" id="MPB">
-                    <label for="MPB">MPB</label>
-                </div>
-            </div>
-    
-            <h3>Artist</h3>
-            <div class="filter-topic">
-                <div class="dflex align-items-center">
-                    <input type="radio" name="Artist" id="Daft Punk">
-                    <label for="Daft Punk">Daft Punk</label>
-                </div>
-            </div>
-            
-            <div class="filter-topic">
-                <div class="dflex align-items-center">
-                    <input type="radio" name="Artist" id="Gorillaz">
-                    <label for="Gorillaz">Gorillaz</label>
-                </div>
-            </div>
-    
-        </div>
+  <div class="col-2">
+    <div class="dflex flex-column align-items-start">
+      <details id="filter-details" open="true">
+				<summary>
+						<h2 class="filter-label">Filter</h2>
+				</summary>
+
+				<details open="true" class="child-filter-body">
+					<summary>
+						<h3 class="filter-label">Genre</h3>
+					</summary>
+
+					<div class="filter-topic" *ngFor="let genre of allGenres">
+						<div class="dflex align-items-center filter-item">
+							<input type="radio" name="Genre" id="{{ genre.name }}">
+							<label for="{{ genre.name }}">{{ genre.name }}</label>
+						</div>
+					</div>
+	
+				</details>
+				
+				<details open="true" class="child-filter-body">
+					<summary>
+						<h3 class="filter-label">Artist</h3>
+					</summary>
+
+					<div class="filter-topic">
+						<div class="dflex align-items-center filter-item">
+							<input type="radio" name="Artist" id="Daft Punk">
+							<label for="Daft Punk">Daft Punk</label>
+						</div>
+					</div>
+	
+					<div class="filter-topic">
+						<div class="dflex align-items-center filter-item">
+							<input type="radio" name="Artist" id="Gorillaz">
+							<label for="Gorillaz">Gorillaz</label>
+						</div>
+					</div>
+				</details>
+
+			</details>      
     </div>
-    
-    <div class="col-8">
-        <div class="dflex flex-column">
-            <h1 style="text-align: center;">{{ num }} albums found</h1>
-    
-            <div class="dflex flex-row justify-content-around">
-                <div class="album-card dflex flex-row align-items-center justify-content-start">
-                    <img src="../../assets/img/Capa_Homework.jpg" alt="Capa Album" height="103%" class="album-image">
-                    <div class="text-content">
-                        <h2 class="content-header">Homework</h2>
-                        <div class="content-text">genero</div>
-                        <span class="content-text">Daft Punk, 1997</span>
-                    </div>
-                </div>
-            
-                <div class="album-card dflex flex-row align-items-center justify-content-start">
-                    <img src="../../assets/img/Plastic Beach.jpg" alt="Capa Album" height="103%" class="album-image">
-                    <div class="text-content">
-                        <h2 class="content-header">Plastic Beach</h2>
-                        <div class="content-text">genero</div>
-                        <span class="content-text">Gorillaz, 2010</span>
-                    </div>
-                </div>
-            </div>
+  </div>
+
+  <div class="col-8">
+    <div class="dflex flex-column">
+      <h1 style="text-align: center;">{{ albumsFound }} albums found</h1>
+
+      <div class="dflex flex-row justify-content-around">
+        <div class="album-card dflex flex-row align-items-center justify-content-start">
+          <img src="../../assets/img/Capa_Homework.jpg" alt="Capa Album" height="103%" class="album-image">
+          <div class="text-content">
+            <h2 class="content-header">Homework</h2>
+            <div class="content-text">genero</div>
+            <span class="content-text">Daft Punk, 1997</span>
+          </div>
         </div>
+
+        <div class="album-card dflex flex-row align-items-center justify-content-start">
+          <img src="../../assets/img/Plastic Beach.jpg" alt="Capa Album" height="103%" class="album-image">
+          <div class="text-content">
+            <h2 class="content-header">Plastic Beach</h2>
+            <div class="content-text">genero</div>
+            <span class="content-text">Gorillaz, 2010</span>
+          </div>
+        </div>
+      </div>
     </div>
-    
-    <div class="col-1"></div>
-    
+  </div>
+
+  <div class="col-1"></div>
+
 </div>
-

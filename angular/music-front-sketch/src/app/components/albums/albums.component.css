@@ -1,48 +1,90 @@
 .content {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 input {
-    margin: 0px 5px 0px 0px;
+  margin: 0px 5px 0px 0px;
 }
 
 h1 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 h3 {
-    margin: 20px 0px 10px 10px;
-}
-
-.filter-topic {
-    margin-left: 10px;
+  margin: 20px 0px 10px 10px;
 }
 
 .album-card {
-    border: 2px solid;
-    width: 27rem;
-    height: 9rem;
-    border-radius: 3px;
-    margin: 10px;
-    background-color: #0E0D13;
+  border: 2px solid;
+  width: 27rem;
+  height: 9rem;
+  border-radius: 3px;
+  margin: 10px;
+  background-color: #0E0D13;
 }
 
 .album-image {
-    border-radius: 1.5px;
-    margin-left: -2px;
+  border-radius: 1.5px;
+  margin-left: -2px;
 }
 
 .text-content {
-    max-width: 21rem;
-    max-height: 9rem;
-    margin-bottom: auto;
+  max-width: 21rem;
+  max-height: 9rem;
+  margin-bottom: auto;
 }
 
 .content-header {
-    margin: 15px 12.5px 30px 12.5px;
-    word-wrap: break-word;
+  margin: 15px 12.5px 30px 12.5px;
+  word-wrap: break-word;
 }
 
 .content-text {
-    margin: 15px 12.5px;
+  margin: 15px 12.5px;
+}
+
+/* DIMINUINDO TAMANHO DO RADIO BUTTON */
+input[type=radio] {
+	transform: scale(0.9);
+}
+
+/* DETAILS */ 
+details>summary {
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none
+}
+
+details[open] summary::before {
+  content: "⏷ ";
+}
+
+details:not([open]) summary::before {
+	content: "🞂 ";
+	margin-right: 7.5px;
+}
+
+#filter-details {
+	margin-top: 22px;
+}
+
+.filter-label {
+	display: inline;
+	margin-left: 2px;
+}
+
+.child-filter-body {
+	margin-top: 20px;
+	margin-left: 10px;
+}
+
+.filter-item {
+	margin: 7px 4px;
+	cursor: pointer;
+}
+
+.filter-topic {
+  margin-left: 10px;
 }
