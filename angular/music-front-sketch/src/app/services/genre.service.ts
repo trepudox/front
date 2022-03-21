@@ -11,6 +11,10 @@ export class GenreService {
 
   constructor(private httpClient: HttpClient) { }
 
+  public getAllGenres(): Observable<GlobalResponse<Genre[]>> {
+    return this.httpClient.get<GlobalResponse<Genre[]>>(`http://localhost:8080/genre`);
+  }
+
   public getGenreById(id: number): Observable<GlobalResponse<Genre>> {
     return this.httpClient.get<GlobalResponse<Genre>>(`http://localhost:8080/genre/id/${id}`);
   }
